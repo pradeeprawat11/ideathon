@@ -5,7 +5,7 @@ import dotenv from 'dotenv'
 dotenv.config();
 
 const DATABASE = process.env.DATABASE
-const BASE_URL = process.env.BASE_URL
+const PORT = process.env.PORT || 8080
 // import pkg from "jsonwebtoken"
 
 const app = express()
@@ -239,6 +239,6 @@ app.post('/rejectSolution', async (req, res)=>{
     rejectSolution(req.body.id).then(res.send({message:"Rejected"}))
 })
 
-app.listen(BASE_URL, () => {
-    console.log("DB started on " ,BASE_URL)
+app.listen(PORT, () => {
+    console.log("DB started at " ,PORT)
 })
