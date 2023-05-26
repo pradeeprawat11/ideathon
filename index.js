@@ -240,5 +240,5 @@ app.post('/rejectSolution', async (req, res)=>{
 })
 
 app.listen(BASE_URL, () => {
-    console.log("DB started at port " ,BASE_URL)
+    console.log("DB started on " ,BASE_URL)
 })
